@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let aprovados = 0;
+        do{
+            var totalDeNotas = prompt("Digite o total de notas");
+        }while(isNaN(totalDeNotas))
+
+        for(let i = 0; i < totalDeNotas; i++){
+            do{
+                var nota = prompt("Insira Uma Nota");
+                if(!isNaN(nota) && nota > 50) aprovados++; 
+            }while(isNaN(nota))
+        }
+
+        document.write(`Total de Aprovados ${aprovados}`);
+    </script>
+</body>
+</html>
